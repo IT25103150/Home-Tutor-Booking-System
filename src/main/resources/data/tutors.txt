@@ -1,0 +1,8 @@
+T001|John Smith|Mathematics,Physics|0.0|Monday-Friday 9AM-5PM|45.0|Experienced math tutor with 10 years of teaching experience
+T002|Sarah Johnson|English,Literature|0.0|Tuesday-Saturday 10AM-6PM|40.0|Passionate about literature and creative writing
+T003|Mike Chen|Computer Science,Programming|0.0|Monday-Thursday 2PM-8PM|50.0|Software engineer and programming mentor
+T004|Emily Davis|Chemistry,Biology|4.7|Wednesday-Saturday 1PM-7PM|42.00|Science educator with lab experience
+T005|James Wilson|Spanish,French|4.5|Monday-Friday 3PM-9PM|38.00|Native speaker fluent in multiple languages
+T006|Lisa Anderson|History,Social Studies|4.6|Tuesday-Friday 10AM-5PM|35.00|History enthusiast and research specialist
+T007|David Martinez|Physics,Engineering|4.8|Monday-Wednesday 4PM-8PM|48.00|Physics graduate with engineering background
+T008|Rebecca Lee|Calculus,Advanced Math|4.9|Thursday-Saturday 11AM-6PM|55.00|Mathematics specialist for advanced students
