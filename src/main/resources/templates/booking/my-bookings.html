@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings | HomeTutor</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table th, .table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .table th {
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+        .action-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            margin-right: 1rem;
+        }
+        .action-link:hover { text-decoration: underline; }
+        .action-delete {
+            color: var(--danger);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="tutors.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 2.5 0 0 1 0-5H20"/></svg>
+                HomeTutor
+            </a>
+            <nav>
+                <a href="tutors.html">Find Tutors</a>
+                <a href="my-bookings.html" class="active">My Bookings</a>
+            </nav>
+        </header>
+
+        <div class="flex justify-between items-center mb-4">
+            <h2>My Bookings</h2>
+            <a href="tutors.html" class="btn btn-primary">Book New Session</a>
+        </div>
+
+        <div class="card" style="padding: 0; overflow: hidden;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Tutor</th>
+                        <th>Subject</th>
+                        <th>Date & Time</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="flex items-center gap-4">
+                                <img src="https://ui-avatars.com/api/?name=Sarah+Jenkins&background=random" alt="Sarah" style="width: 40px; height: 40px; border-radius: 50%;">
+                                <strong>Sarah Jenkins</strong>
+                            </div>
+                        </td>
+                        <td>Calculus</td>
+                        <td>Oct 24, 2024<br><span class="text-muted" style="font-size: 0.875rem;">10:00 AM</span></td>
+                        <td><span class="badge badge-success">Confirmed</span></td>
+                        <td>
+                            <a href="booking-edit.html" class="action-link">Edit / Reschedule</a>
+                            <a href="#" class="action-link action-delete" onclick="confirm('Are you sure you want to cancel this booking?');">Cancel</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="flex items-center gap-4">
+                                <img src="https://ui-avatars.com/api/?name=David+Chen&background=random" alt="David" style="width: 40px; height: 40px; border-radius: 50%;">
+                                <strong>David Chen</strong>
+                            </div>
+                        </td>
+                        <td>Programming</td>
+                        <td>Oct 26, 2024<br><span class="text-muted" style="font-size: 0.875rem;">02:00 PM</span></td>
+                        <td><span class="badge badge-warning">Pending</span></td>
+                        <td>
+                            <a href="booking-edit.html" class="action-link">Edit / Reschedule</a>
+                            <a href="#" class="action-link action-delete" onclick="confirm('Are you sure you want to cancel this booking?');">Cancel</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
