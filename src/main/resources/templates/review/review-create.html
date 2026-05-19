@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave a Review | HomeTutor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" style="max-width: 600px;">
+        <header>
+            <a href="my-reviews.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 2.5 0 0 1 0-5H20"/></svg>
+                HomeTutor Reviews
+            </a>
+            <nav>
+                <a href="my-reviews.html">My Reviews</a>
+                <a href="review-create.html" class="active">Leave a Review</a>
+            </nav>
+        </header>
+
+        <a href="my-reviews.html" class="text-muted mb-4" style="display: inline-block; text-decoration: none;">&larr; Back</a>
+
+        <div class="card">
+            <h2 class="mb-4">Leave a Review</h2>
+            
+            <form action="my-reviews.html">
+                <div class="form-group">
+                    <label>Select Tutor</label>
+                    <select required>
+                        <option value="">Choose a tutor you've had a session with...</option>
+                        <option value="sarah">Sarah Jenkins (Calculus - Oct 24)</option>
+                        <option value="emily">Emily Davis (English - Oct 10)</option>
+                    </select>
+                </div>
+
+                <div class="form-group text-center my-4" style="padding: 1rem 0;">
+                    <label style="margin-bottom: 1rem;">Overall Rating</label>
+                    <div class="star-rating" style="justify-content: center;">
+                        <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 stars">★</label>
+                        <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 stars">★</label>
+                        <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars">★</label>
+                        <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 stars">★</label>
+                        <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star">★</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Written Feedback</label>
+                    <textarea rows="5" placeholder="Share your experience... what did the tutor do well? What could be improved?" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Review</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
