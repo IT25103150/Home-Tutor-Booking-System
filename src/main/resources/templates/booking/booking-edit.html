@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Booking | HomeTutor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" style="max-width: 800px;">
+        <header>
+            <a href="tutors.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 2.5 0 0 1 0-5H20"/></svg>
+                HomeTutor
+            </a>
+        </header>
+
+        <a href="my-bookings.html" class="text-muted mb-4" style="display: inline-block; text-decoration: none;">&larr; Back to My Bookings</a>
+
+        <div class="card">
+            <h2 class="mb-4">Reschedule Session with Sarah Jenkins</h2>
+            
+            <form action="my-bookings.html">
+                <div class="grid grid-2 mb-4">
+                    <div class="form-group">
+                        <label>New Date</label>
+                        <input type="date" value="2024-10-24" required>
+                    </div>
+                    <div class="form-group">
+                        <label>New Time</label>
+                        <select required>
+                            <option value="09:00">09:00 AM</option>
+                            <option value="10:00" selected>10:00 AM</option>
+                            <option value="14:00">02:00 PM</option>
+                            <option value="16:00">04:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Update Message (Optional)</label>
+                    <textarea rows="4">I need to change the time slightly, hope this works!</textarea>
+                </div>
+
+                <div class="flex gap-4 mt-4">
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <a href="my-bookings.html" class="btn btn-outline">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
