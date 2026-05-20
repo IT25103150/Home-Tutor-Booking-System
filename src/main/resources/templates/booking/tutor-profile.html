@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Profile | HomeTutor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="tutors.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 2.5 0 0 1 0-5H20"/></svg>
+                HomeTutor
+            </a>
+            <nav>
+                <a href="tutors.html">Find Tutors</a>
+                <a href="my-bookings.html">My Bookings</a>
+            </nav>
+        </header>
+
+        <a href="tutors.html" class="text-muted mb-4" style="display: inline-block; text-decoration: none;">&larr; Back to Search</a>
+
+        <div class="grid grid-2" style="grid-template-columns: 2fr 1fr;">
+            <!-- Profile Details -->
+            <div class="card">
+                <div class="flex items-center gap-4 mb-4">
+                    <div style="width: 100px; height: 100px; border-radius: 50%; background: #e2e8f0; overflow: hidden;">
+                        <img src="https://ui-avatars.com/api/?name=Sarah+Jenkins&background=random" alt="Sarah" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div>
+                        <h1 style="margin-bottom: 0.25rem;">Sarah Jenkins</h1>
+                        <p class="text-muted" style="margin-bottom: 0.5rem;">MSc. Mathematics, Stanford University</p>
+                        <span class="badge badge-success">★ 4.9 (120 reviews)</span>
+                    </div>
+                </div>
+
+                <h3 class="mt-4">About Me</h3>
+                <p class="text-muted">I am a passionate mathematics and physics tutor with over 5 years of experience helping high school and college students achieve top grades. My teaching style is interactive, focusing on understanding core concepts rather than memorization.</p>
+
+                <h3 class="mt-4">Subjects Offered</h3>
+                <div class="flex gap-4 mb-4">
+                    <span class="badge" style="background: #e0e7ff; color: var(--primary);">Calculus</span>
+                    <span class="badge" style="background: #e0e7ff; color: var(--primary);">Algebra</span>
+                    <span class="badge" style="background: #e0e7ff; color: var(--primary);">Physics 101</span>
+                </div>
+            </div>
+
+            <!-- Booking Widget -->
+            <div class="card" style="align-self: start;">
+                <h2 style="font-size: 1.5rem; color: var(--primary);">$45 <span style="font-size: 1rem; color: var(--text-muted); font-weight: 400;">/ hour</span></h2>
+                <hr style="border: none; border-top: 1px solid var(--border); margin: 1rem 0;">
+                
+                <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Ready to learn?</h3>
+                <p class="text-muted mb-4">Select a date and time to request a session with Sarah.</p>
+                
+                <a href="booking-create.html" class="btn btn-primary" style="width: 100%; display: block; text-align: center;">Book Session Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

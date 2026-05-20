@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reviews | HomeTutor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="my-reviews.html" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 2.5 0 0 1 0-5H20"/></svg>
+                HomeTutor Reviews
+            </a>
+            <nav>
+                <a href="my-reviews.html" class="active">My Reviews</a>
+                <a href="review-create.html">Leave a Review</a>
+            </nav>
+        </header>
+
+        <div class="flex justify-between items-center mb-4">
+            <h2>Reviews I've Given</h2>
+            <a href="review-create.html" class="btn btn-primary">Write New Review</a>
+        </div>
+
+        <div class="grid grid-2">
+            <!-- Review 1 -->
+            <div class="card">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="flex items-center gap-4">
+                        <img src="https://ui-avatars.com/api/?name=Sarah+Jenkins&background=random" alt="Sarah" style="width: 50px; height: 50px; border-radius: 50%;">
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.1rem;">Sarah Jenkins</h3>
+                            <p class="text-muted" style="font-size: 0.875rem;">Calculus</p>
+                        </div>
+                    </div>
+                    <div class="stars-display">★★★★★</div>
+                </div>
+                
+                <p class="mb-4">"Sarah is an incredible tutor! She helped me understand complex calculus concepts that I was struggling with for months. Highly recommend her to anyone looking to improve their math grades."</p>
+                
+                <div class="flex justify-between items-center mt-4 pt-4" style="border-top: 1px solid var(--border);">
+                    <span class="text-muted" style="font-size: 0.875rem;">Posted on Oct 15, 2024</span>
+                    <div class="flex gap-4">
+                        <a href="review-edit.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Edit</a>
+                        <a href="#" style="color: var(--danger); text-decoration: none; font-weight: 500;" onclick="confirm('Delete this review permanently?');">Delete</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="card">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="flex items-center gap-4">
+                        <img src="https://ui-avatars.com/api/?name=David+Chen&background=random" alt="David" style="width: 50px; height: 50px; border-radius: 50%;">
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.1rem;">David Chen</h3>
+                            <p class="text-muted" style="font-size: 0.875rem;">Programming</p>
+                        </div>
+                    </div>
+                    <div class="stars-display">★★★★☆</div>
+                </div>
+                
+                <p class="mb-4">"Great sessions on Python programming. David is very patient and explains things clearly. Only reason I gave 4 stars instead of 5 is because we started 10 minutes late once, but otherwise perfect."</p>
+                
+                <div class="flex justify-between items-center mt-4 pt-4" style="border-top: 1px solid var(--border);">
+                    <span class="text-muted" style="font-size: 0.875rem;">Posted on Sep 28, 2024</span>
+                    <div class="flex gap-4">
+                        <a href="review-edit.html" style="color: var(--primary); text-decoration: none; font-weight: 500;">Edit</a>
+                        <a href="#" style="color: var(--danger); text-decoration: none; font-weight: 500;" onclick="confirm('Delete this review permanently?');">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

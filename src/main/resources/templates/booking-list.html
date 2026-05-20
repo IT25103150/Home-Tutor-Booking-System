@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings - HomeTutor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/booking-list.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-book"></i> HomeTutor
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/tutors">Find Tutors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/bookings">My Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/reviews">My Reviews</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="premium-header">
+        <div class="container text-center">
+            <h1>My Bookings</h1>
+            <p>Manage and track your tutoring sessions</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container py-4">
+        <div class="row align-items-center mb-5 animate-fade-in">
+            <div class="col-md-6">
+                <h3 class="fw-bold m-0"><i class="fas fa-history text-primary"></i> Your Bookings History</h3>
+            </div>
+            <div class="col-md-6 text-end">
+                <a href="/tutors" class="btn-premium">
+                    <i class="fas fa-plus"></i> New Booking
+                </a>
+            </div>
+        </div>
+
+        <!-- Filter Tabs Wrapper -->
+        <div class="tabs-container animate-fade-in">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab">
+                        <i class="fas fa-list-ul me-1"></i> All (<span id="countAll">0</span>)
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pending-tab" data-bs-toggle="tab" data-bs-target="#pending" type="button" role="tab">
+                        <i class="fas fa-hourglass-half me-1"></i> Pending (<span id="countPending">0</span>)
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="confirmed-tab" data-bs-toggle="tab" data-bs-target="#confirmed" type="button" role="tab">
+                        <i class="fas fa-calendar-check me-1"></i> Confirmed (<span id="countConfirmed">0</span>)
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="completed-tab" data-bs-toggle="tab" data-bs-target="#completed" type="button" role="tab">
+                        <i class="fas fa-check-circle me-1"></i> Completed (<span id="countCompleted">0</span>)
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Bookings List -->
+        <div class="tab-content animate-fade-in">
+            <div class="tab-pane fade show active" id="all">
+                <div id="allBookings" class="bookings-container"></div>
+            </div>
+            <div class="tab-pane fade" id="pending">
+                <div id="pendingBookings" class="bookings-container"></div>
+            </div>
+            <div class="tab-pane fade" id="confirmed">
+                <div id="confirmedBookings" class="bookings-container"></div>
+            </div>
+            <div class="tab-pane fade" id="completed">
+                <div id="completedBookings" class="bookings-container"></div>
+            </div>
+        </div>
+
+        <!-- No bookings message -->
+        <div id="noBookings" class="alert alert-no-results text-center d-none" role="alert">
+            <i class="fas fa-calendar-times fa-2x mb-3 text-primary d-block"></i>
+            <h4>No Bookings Yet</h4>
+            <p class="mb-4">You haven't scheduled any tutoring sessions.</p>
+            <a href="/tutors" class="btn-premium">Book a Tutor Now</a>
+        </div>
+    </div>
+
+    <!-- Cancel Booking Modal -->
+    <div class="modal fade" id="cancelModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fas fa-exclamation-triangle me-2"></i> Cancel Booking</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-0 fs-5">Are you sure you want to cancel this booking?</p>
+                    <p class="text-muted mt-2">This session status will be updated to CANCELLED.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No, Keep It</button>
+                    <button type="button" class="btn btn-danger" id="confirmCancel">Yes, Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Booking Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fas fa-trash me-2"></i> Delete Booking</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-0 fs-5">Are you sure you want to delete this booking?</p>
+                    <p class="text-danger mt-2"><i class="fas fa-exclamation-circle"></i> This action cannot be undone and will permanently remove this record.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmDelete">Delete permanently</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-custom">
+        <div class="container text-center">
+            <p>&copy; 2026 HomeTutor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/booking-list.js"></script>
+</body>
+</html>
