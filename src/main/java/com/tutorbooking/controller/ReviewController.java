@@ -15,7 +15,7 @@ import java.util.Map;
 @CrossOrigin(origins = "*")
 public class ReviewController {
     @Autowired
-    private ReviewService reviewService;
+    private ReviewService reviewService; //dependency
 
     // Get all reviews
     @GetMapping
