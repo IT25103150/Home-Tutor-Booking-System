@@ -17,7 +17,7 @@ import java.util.Map;
 @CrossOrigin(origins = "*")
 public class BookingController {
     @Autowired
-    private BookingService bookingService;
+    private BookingService bookingService; //dependency
 
     // Get all bookings
     @GetMapping
